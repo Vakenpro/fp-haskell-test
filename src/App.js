@@ -1,15 +1,10 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './mainPage';
 import Tests from './tests';
 import Crossword from './crossword';
 
-import { Ul, } from './styled';
+import { Ul } from './styled';
 
 export default function App() {
   return (
