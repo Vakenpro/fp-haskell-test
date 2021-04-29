@@ -1,32 +1,12 @@
 import React, { useRef } from 'react';
 import Crossword from '@jaredreisinger/react-crossword';
+import { useLocation } from 'react-router-dom';
 
-const data = {
-  across: {
-    1: {
-      clue: 'are you gay',
-      answer: 'NO',
-      row: 0,
-      col: 0,
-    },
-    3: {
-      clue: 'gays are also',
-      answer: 'PIDORASES',
-      row: 2,
-      col: 1,
-    },
-  },
-  down: {
-    2: {
-      clue: 'part of programing where you use classes',
-      answer: 'OOP',
-      row: 0,
-      col: 1,
-    },
-  },
-};
+import { crosswordData } from './crosswordConstant';
 
 const CrosswordComponent = () => {
+  const crosswordId = useLocation().pathname.split('/')[2];
+  const data = crosswordData[crosswordId].data;
   const crossword = useRef();
   const handleClear = () => {
     alert(crossword.current.isCrosswordCorrect());

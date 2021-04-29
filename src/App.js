@@ -1,9 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import Home from './mainPage';
-import Tests from './tests';
-import Crossword from './crossword';
-import Trens from './treners';
+import Test from './components/test/tests';
+import Tests from './pages/testPage/testPage';
+import Crossword from './components/crossword/crossword';
+import Crosswords from './pages/crosswordPage/crosswordPage';
+import Trainer from './components/trainer/trainer';
+import Trainers from './pages/trainers/trainers';
 
 import { Ul } from './styled';
 
@@ -20,10 +24,10 @@ export default function App() {
               <Link to="/tests">Тесты</Link>
             </li>
             <li>
-              <Link to="/cross">Кроссворды</Link>
+              <Link to="/crosswords">Кроссворды</Link>
             </li>
             <li>
-              <Link to="/tren">Тренажеры</Link>
+              <Link to="/trainers">Тренажеры</Link>
             </li>
           </Ul>
         </nav>
@@ -31,11 +35,20 @@ export default function App() {
           <Route path="/tests">
             <Tests />
           </Route>
-          <Route path="/cross">
+          <Route path="/test/:id">
+            <Test />
+          </Route>
+          <Route path="/crosswords">
+            <Crosswords />
+          </Route>
+          <Route path="/crossword/:id">
             <Crossword />
           </Route>
-          <Route path="/tren">
-            <Trens />
+          <Route path="/trainers">
+            <Trainers />
+          </Route>
+          <Route path="/trainer/:id">
+            <Trainer />
           </Route>
           <Route path="/">
             <Home />

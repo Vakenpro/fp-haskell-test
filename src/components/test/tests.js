@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { testdata } from './testConstant';
-const Tests = () => {
+import { useLocation } from 'react-router-dom';
+
+import { testsData } from './testConstant';
+const Test = () => {
+  const testId = useLocation().pathname.split('/')[2];
+  const testData = testsData[testId].data;
   const [disabled, setDisabled] = useState(true);
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [answersCount, setAnswersCount] = useState(0);
   const [trueAnswers, setTrueAnswers] = useState(0);
 
   useEffect(() => {
-    setDisabled(answersCount !== testdata.length);
+    setDisabled(answersCount !== testData.length);
   }, [answersCount]);
 
   const handleChoose = (id, value, answerId) => {
@@ -16,23 +20,23 @@ const Tests = () => {
     if (chosenAnswers.length === 0 || chosenAnswers.length === result.length) {
       setChosenAnswers([...chosenAnswers, item]);
       setAnswersCount(answersCount + 1);
-      setTrueAnswers(testdata[id].trueAnswerId === answerId ? trueAnswers + 1 : trueAnswers);
+      setTrueAnswers(testData[id].trueAnswerId === answerId ? trueAnswers + 1 : trueAnswers);
     } else {
       setChosenAnswers(chosenAnswers.map((answer) => (answer.id === id ? item : answer)));
-      setTrueAnswers(testdata[id].trueAnswerId === answerId ? trueAnswers + 1 : trueAnswers - 1);
+      setTrueAnswers(testData[id].trueAnswerId === answerId ? trueAnswers + 1 : trueAnswers - 1);
     }
   };
 
   const handleSubmit = () => {
-    trueAnswers === testdata.length
+    trueAnswers === testData.length
       ? alert('Все верно, вы гений')
-      : alert(`Правильных ответов:${trueAnswers} из ${testdata.length}`);
+      : alert(`Правильных ответов:${trueAnswers} из ${testData.length}`);
   };
 
   return (
     <>
       <ul>
-        {testdata.map((test) => (
+        {testData.map((test) => (
           <li key={test.id}>
             {test.question}
             <br />
@@ -59,4 +63,4 @@ const Tests = () => {
   );
 };
 
-export default Tests;
+export default Test;

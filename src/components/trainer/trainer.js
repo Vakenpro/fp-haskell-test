@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { trendata } from './trenersConstant';
+import { useLocation } from 'react-router-dom';
+
+import { trainersData } from './trainerConstant';
+
 const Trens = () => {
+  const trainerId = useLocation().pathname.split('/')[2];
+  const trainerdata = trainersData[trainerId].data;
+
   const [answersCount, setAnswersCount] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
-    setDisabled(answersCount !== trendata.left.length);
+    setDisabled(answersCount !== trainerdata.left.length);
   }, [answersCount]);
 
   const handleChange = ({ target }) => {
@@ -20,25 +26,27 @@ const Trens = () => {
     }
   };
   const handleClick = () => {
-    const result = trendata.left.filter((statement) => statement.answerId + 1 === +chosenAnswers[statement.id].value);
-    result.length === trendata.left.length
+    const result = trainerdata.left.filter(
+      (statement) => statement.answerId + 1 === +chosenAnswers[statement.id].value
+    );
+    result.length === trainerdata.left.length
       ? alert('Все верно, вы гений')
-      : alert(`Правильных ответов:${result.length} из ${trendata.left.length}`);
+      : alert(`Правильных ответов:${result.length} из ${trainerdata.left.length}`);
   };
   return (
     <>
       <h2>тренажеры</h2>
       <div style={{ display: 'flex' }}>
         <ul style={{ marginRigth: '200px' }}>
-          {trendata.left.map((statement) => (
+          {trainerdata.left.map((statement) => (
             <li key={statement.id}>
               {statement.text}
-              <input id={statement.id} type="number" min="1" max={trendata.left.length} onChange={handleChange} />
+              <input id={statement.id} type="number" min="1" max={trainerdata.left.length} onChange={handleChange} />
             </li>
           ))}
         </ul>
         <ul>
-          {trendata.right.map((statement) => (
+          {trainerdata.right.map((statement) => (
             <li key={statement.id}>{statement.text}</li>
           ))}
         </ul>
