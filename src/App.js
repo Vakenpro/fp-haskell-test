@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './mainPage';
 import Tests from './tests';
 import Crossword from './crossword';
+import Trens from './treners';
 
 import { Ul } from './styled';
 
@@ -34,7 +35,7 @@ export default function App() {
             <Crossword />
           </Route>
           <Route path="/tren">
-            <Tren />
+            <Trens />
           </Route>
           <Route path="/">
             <Home />
@@ -43,8 +44,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-function Tren() {
-  return <h2>Тренажеры</h2>;
 }
