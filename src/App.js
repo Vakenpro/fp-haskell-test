@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './mainPage';
+import Tests from './tests';
+import Crossword from './crossword';
 
-function App() {
+import { Ul, } from './styled';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <Ul>
+            <li>
+              <Link to="/">Главная</Link>
+            </li>
+            <li>
+              <Link to="/tests">Тесты</Link>
+            </li>
+            <li>
+              <Link to="/cross">Кроссворды</Link>
+            </li>
+            <li>
+              <Link to="/tren">Тренажеры</Link>
+            </li>
+          </Ul>
+        </nav>
+        <Switch>
+          <Route path="/tests">
+            <Tests />
+          </Route>
+          <Route path="/cross">
+            <Crossword />
+          </Route>
+          <Route path="/tren">
+            <Tren />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+function Tren() {
+  return <h2>Тренажеры</h2>;
+}
