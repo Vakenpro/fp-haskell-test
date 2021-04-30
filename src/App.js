@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-function App() {
+import Home from './mainPage';
+import Test from './components/test/tests';
+import Tests from './pages/testPage/testPage';
+import Crossword from './components/crossword/crossword';
+import Crosswords from './pages/crosswordPage/crosswordPage';
+import Trainer from './components/trainer/trainer';
+import Trainers from './pages/trainers/trainers';
+
+import { Ul } from './styled';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <Ul>
+            <li>
+              <Link to="/">Главная</Link>
+            </li>
+            <li>
+              <Link to="/tests">Тесты</Link>
+            </li>
+            <li>
+              <Link to="/crosswords">Кроссворды</Link>
+            </li>
+            <li>
+              <Link to="/trainers">Тренажеры</Link>
+            </li>
+          </Ul>
+        </nav>
+        <Switch>
+          <Route path="/tests">
+            <Tests />
+          </Route>
+          <Route path="/test/:id">
+            <Test />
+          </Route>
+          <Route path="/crosswords">
+            <Crosswords />
+          </Route>
+          <Route path="/crossword/:id">
+            <Crossword />
+          </Route>
+          <Route path="/trainers">
+            <Trainers />
+          </Route>
+          <Route path="/trainer/:id">
+            <Trainer />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
