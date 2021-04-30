@@ -15,7 +15,7 @@ const CrosswordComponent = () => {
   return (
     <>
       <h2>кроссворд</h2>
-          <p>попробуй решить мой кроссворд</p>
+      <p>попробуй решить мой кроссворд</p>
       <div style={{ width: '400px', height: '400px' }} class="crossword">
         <Crossword
           ref={crossword}
