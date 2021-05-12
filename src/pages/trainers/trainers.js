@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { trainersData } from '../../components/trainer/trainerConstant';
+
+import { A } from './styled';
+
 export default function () {
   return (
-    <ul>
+    <ul style={{padding:0}}>
       {trainersData.map((elem) => (
-        <li key={elem.id}>
-          <Link to={`trainer/${elem.id}`}>Тренажер № {elem.id + 1}</Link>
-        </li>
+          <A key={elem.id} to={`trainer/${elem.id}`}>Тренажер № {elem.id + 1}</A>
       ))}
     </ul>
   );

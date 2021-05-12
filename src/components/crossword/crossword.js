@@ -4,6 +4,8 @@ import { useLocation } from 'react-router-dom';
 import './index.css';
 import { crosswordData } from './crosswordConstant';
 
+import { Button } from './styled';
+
 const CrosswordComponent = () => {
   const crosswordId = useLocation().pathname.split('/')[2];
   const data = crosswordData[crosswordId].data;
@@ -14,8 +16,6 @@ const CrosswordComponent = () => {
   };
   return (
     <>
-      <h2>кроссворд</h2>
-      <p>попробуй решить мой кроссворд</p>
       <div style={{ width: '400px', height: '400px' }} class="crossword">
         <Crossword
           ref={crossword}
@@ -24,7 +24,7 @@ const CrosswordComponent = () => {
           theme={{ gridBackground: 'rgb(0,0,0)' }}
         />
       </div>
-      <button onClick={handleClear}>очистить</button>
+      <Button onClick={handleClear}>очистить</Button>
     </>
   );
 };

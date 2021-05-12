@@ -1,5 +1,43 @@
 .crossword {
-  width: 50vw;
-  height: 50vh;
-  margin-left: 20vw;
+  width: 100vw !important;
+  height: auto !important;
+  margin: auto;
+}
+.crossword > div {
+  display: flex;
+  flex-direction: column;
+}
+.grid {
+  width: 30vw !important;
+  margin: auto;
+}
+.clues {
+  flex-direction: row !important;
+}
+.direction {
+  width: 50%;
+}
+.direction:first-of-type {
+  border-right: 1px solid black;
+}
+.header {
+  width: 100%;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header:before,
+.header:after {
+  display: inline-block;
+  content: '';
+  height: 0.5px;
+  position: relative;
+  vertical-align: middle;
+  width: 35%;
+  background: black;
+}
+.direction:last-of-type > .clue {
+  margin-left: 10px;
 }

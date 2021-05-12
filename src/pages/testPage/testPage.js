@@ -1,14 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { testsData } from '../../components/test/testConstant';
+
+import { A } from './styled';
+
 export default function () {
   return (
-    <ul>
+    <ul style={{padding:0}}>
       {testsData.map((elem) => (
-        <li key={elem.id}>
-          <Link to={`test/${elem.id}`}>Тест № {elem.id + 1}</Link>
-        </li>
+        
+        <A key={elem.id} to={`test/${elem.id}`}>
+          Тест № {elem.id + 1}
+          </A>
+        
       ))}
+      
     </ul>
   );
 }
