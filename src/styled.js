@@ -3,20 +3,31 @@ import styled from 'styled-components';
 export const Ul = styled.ul`
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  height: 5vh;
   list-style: none;
   padding: 0;
   & > li {
-    width: 25%;
+    padding: 0 15px;
     text-align: center;
-    border-right: 1px solid grey;
     & > a {
       text-decoration: none;
       color: black;
     }
   }
-  & > li:last-of-type {
-    border-right: 0px solid grey;
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Logo = styled.div`
+  font-size: 18px;
+  margin: 0 30px;
+  & > a {
+    text-decoration: none;
+    color: black;
   }
 `;

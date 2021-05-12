@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { testsData } from './testConstant';
 const Test = () => {
-  const testId = useLocation().pathname.split('/')[2];
-  const testData = testsData[testId].data;
+  const { id } = useParams();
+  const testData = testsData[id].data;
   const [disabled, setDisabled] = useState(true);
   const [chosenAnswers, setChosenAnswers] = useState([]);
   const [answersCount, setAnswersCount] = useState(0);

@@ -9,52 +9,53 @@ import Crosswords from './pages/crosswordPage/crosswordPage';
 import Trainer from './components/trainer/trainer';
 import Trainers from './pages/trainers/trainers';
 
-import { Ul } from './styled';
+import { Ul, Nav, Logo } from './styled';
 
 export default function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <Ul>
-            <li>
-              <Link to="/">Главная</Link>
-            </li>
-            <li>
-              <Link to="/tests">Тесты</Link>
-            </li>
-            <li>
-              <Link to="/crosswords">Кроссворды</Link>
-            </li>
-            <li>
-              <Link to="/trainers">Тренажеры</Link>
-            </li>
-          </Ul>
-        </nav>
-        <Switch>
-          <Route path="/tests">
-            <Tests />
-          </Route>
-          <Route path="/test/:id">
-            <Test />
-          </Route>
-          <Route path="/crosswords">
-            <Crosswords />
-          </Route>
-          <Route path="/crossword/:id">
-            <Crossword />
-          </Route>
-          <Route path="/trainers">
-            <Trainers />
-          </Route>
-          <Route path="/trainer/:id">
-            <Trainer />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Nav>
+        <Logo>
+          <a href="">Haskell</a>
+        </Logo>
+        <Ul>
+          <li>
+            <Link to="/">Главная</Link>
+          </li>
+          <li>
+            <Link to="/tests">Тесты</Link>
+          </li>
+          <li>
+            <Link to="/crosswords">Кроссворды</Link>
+          </li>
+          <li>
+            <Link to="/trainers">Тренажеры</Link>
+          </li>
+        </Ul>
+      </Nav>
+      <Switch>
+        <Route path="/tests">
+          <Tests />
+        </Route>
+        <Route path="/test/:id">
+          <Test />
+        </Route>
+        <Route path="/crosswords">
+          <Crosswords />
+        </Route>
+        <Route path="/crossword/:id">
+          <Crossword />
+        </Route>
+        <Route path="/trainers">
+          <Trainers />
+        </Route>
+        <Route path="/trainer/:id">
+          <Trainer />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
 }
