@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { crosswordData } from '../../components/crossword/crosswordConstant';
+
+import { A } from './styled';
+
 export default function () {
   return (
-    <ul>
+    <ul style={{padding:0}}>
       {crosswordData.map((elem) => (
-        <li key={elem.id}>
-          <Link to={`crossword/${elem.id}`}>Кроссворд № {elem.id + 1}</Link>
-        </li>
+          <A key={elem.id} to={`crossword/${elem.id}`}>Кроссворд № {elem.id + 1}</A>
       ))}
     </ul>
   );
