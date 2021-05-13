@@ -5,33 +5,77 @@ export const trainersData = [
       left: [
         {
           id: 0,
-          text: 'gays are',
-          answerId: 2,
-        },
-        {
-          id: 1,
-          text: 'oop is',
+          text: '1990г.',
           answerId: 1,
         },
         {
+          id: 1,
+          text: '1958г.',
+          answerId: 7,
+        },
+        {
           id: 2,
-          text: 'gays also are',
+          text: '2004г.',
+          answerId: 3,
+        },
+        {
+          id: 3,
+          text: '1985г.',
+          answerId: 4,
+        },
+        {
+          id: 4,
+          text: '1986г.',
+          answerId: 6,
+        },
+        {
+          id: 5,
+          text: '1979г.',
           answerId: 0,
+        },
+        {
+          id: 6,
+          text: '2002г.',
+          answerId: 2,
+        },
+        {
+          id: 7,
+          text: '1960г.',
+          answerId: 5,
         },
       ],
       right: [
         {
           id: 0,
-          text: 'pidarases',
+          text: 'ML',
         },
         {
           id: 1,
-          text: 'oop',
-          answerId: 1,
+          text: 'Haskell',
         },
         {
           id: 2,
-          text: 'gays',
+          text: 'C#',
+        },
+        {
+          id: 3,
+          text: 'Scala',
+        },
+        {
+          id: 4,
+          text: 'Miranda',
+        },
+        {
+          id: 5,
+          text: 'APL',
+        },
+        {
+          id: 6,
+          text: 'Erlang',
+        },
+        {
+          id: 7,
+          text: 'Lisp',
         },
       ],
     },

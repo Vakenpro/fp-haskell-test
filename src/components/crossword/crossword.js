@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 import Crossword from '@jaredreisinger/react-crossword';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './index.css';
 import { crosswordData } from './crosswordConstant';
 
 import { Button } from './styled';
 
 const CrosswordComponent = () => {
-  const crosswordId = useLocation().pathname.split('/')[2];
-  const data = crosswordData[crosswordId].data;
+  const { id } = useParams();
+  const data = crosswordData[id].data;
   const crossword = useRef();
   const handleClear = () => {
     alert(crossword.current.isCrosswordCorrect());

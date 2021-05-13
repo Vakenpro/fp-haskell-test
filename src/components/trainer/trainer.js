@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { trainersData } from './trainerConstant';
 
 const Trens = () => {
-  const trainerId = useLocation().pathname.split('/')[2];
-  const trainerdata = trainersData[trainerId].data;
+  const { id } = useParams();
+  const trainerdata = trainersData[id].data;
 
   const [answersCount, setAnswersCount] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
@@ -45,11 +45,11 @@ const Trens = () => {
             </li>
           ))}
         </ul>
-        <ul>
+        <ol>
           {trainerdata.right.map((statement) => (
             <li key={statement.id}>{statement.text}</li>
           ))}
-        </ul>
+        </ol>
       </div>
       <button type="button" onClick={handleClick} disabled={disabled}>
         проверить ответы
