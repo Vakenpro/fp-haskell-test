@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { Button } from './styled';
+import { Form } from './styled';
+import { Li } from './styled';
+import { Ul } from './styled';
+import { H2 } from './styled';
+import { H3 } from './styled';
+import { Hr } from './styled';
+
+
 import { testsData } from './testConstant';
 const Test = () => {
   const testId = useLocation().pathname.split('/')[2];
@@ -35,12 +44,15 @@ const Test = () => {
 
   return (
     <>
-      <ul>
+      <Ul>
+        <H2>Предварительный просмотр:</H2>
+        <Hr></Hr>
+        <H3>Тест по Haskell на тему:"*****".</H3>
         {testData.map((test) => (
-          <li key={test.id}>
+          <Li key={test.id}>
             {test.question}
             <br />
-            <form>
+            <Form>
               {test.answers.map((answer) => (
                 <label key={answer.id}>
                   <input
@@ -52,13 +64,13 @@ const Test = () => {
                   {answer.text}
                 </label>
               ))}
-            </form>
-          </li>
+            </Form>
+          </Li>
         ))}
-      </ul>
-      <button type="button" onClick={handleSubmit} disabled={disabled}>
+      </Ul>
+      <Button type="button" onClick={handleSubmit} disabled={disabled}>
         проверить ответы
-      </button>
+      </Button>
     </>
   );
 };
