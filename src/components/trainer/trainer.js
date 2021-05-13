@@ -45,11 +45,11 @@ const Trens = () => {
             </li>
           ))}
         </ul>
-        <ul>
+        <ol>
           {trainerdata.right.map((statement) => (
             <li key={statement.id}>{statement.text}</li>
           ))}
-        </ul>
+        </ol>
       </div>
       <button type="button" onClick={handleClick} disabled={disabled}>
         проверить ответы
