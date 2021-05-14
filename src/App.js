@@ -9,12 +9,12 @@ import Crosswords from './pages/crosswordPage/crosswordPage';
 import Trainer from './components/trainer/trainer';
 import Trainers from './pages/trainers/trainers';
 
-import { Ul } from './styled';
+import { Ul, Wrapper } from './styled';
 
 export default function App() {
   return (
     <Router>
-      <div>
+      <Wrapper >
         <nav>
           <Ul>
             <li>
@@ -54,7 +54,7 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
+      </Wrapper >
     </Router>
   );
 }

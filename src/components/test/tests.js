@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { Button } from './styled';
-import { Form } from './styled';
-import { Li } from './styled';
-import { Ul } from './styled';
-import { H2 } from './styled';
-import { H3 } from './styled';
-import { Hr } from './styled';
+import { Button, Form, Li, Ul, H2, H3, Hr } from './styled';
 
 
 import { testsData } from './testConstant';

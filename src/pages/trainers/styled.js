@@ -16,7 +16,7 @@ export const A = styled(Link)`
   letter-spacing: 3px;
   font-weight: 600;
   color: #524f4e;
-  background: white;
+  background: #AFEEEE;
   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
   transition: .3s;
   &:hover {

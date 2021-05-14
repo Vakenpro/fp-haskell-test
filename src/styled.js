@@ -20,3 +20,9 @@ export const Ul = styled.ul`
     border-right: 0px solid grey;
   }
 `;
+
+export const Wrapper = styled.div`
+  min-height:100vh;
+    background: #E0FFFF;
+    background: linear-gradient(to bottom, #E0FFFF, #AFEEEE);
+`;
