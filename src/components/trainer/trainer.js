@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { trainersData } from './trainerConstant';
 
 import { Wrapper, Button, Trainer, Trainerquest, Ul, Input, Ol, Li, H2, H3, Hr } from './styled';
 
 const Trens = () => {
-  const trainerId = useLocation().pathname.split('/')[2];
-  const trainerdata = trainersData[trainerId].data;
+  const { id } = useParams();
+  const trainerdata = trainersData[id].data;
 
   const [answersCount, setAnswersCount] = useState(0);
   const [chosenAnswers, setChosenAnswers] = useState([]);
