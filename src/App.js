@@ -9,11 +9,12 @@ import Crosswords from './pages/crosswordPage/crosswordPage';
 import Trainer from './components/trainer/trainer';
 import Trainers from './pages/trainers/trainers';
 
-import { Ul, Nav, Logo } from './styled';
+import { Ul, Nav, Logo, Wrapper } from './styled';
 
 export default function App() {
   return (
     <Router>
+      <Wrapper >
       <Nav>
         <Logo>
           <a href="">Haskell</a>
@@ -56,6 +57,7 @@ export default function App() {
           <Home />
         </Route>
       </Switch>
+      </Wrapper >
     </Router>
   );
 }

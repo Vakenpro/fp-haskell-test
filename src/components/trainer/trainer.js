@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import { trainersData } from './trainerConstant';
 
+import { Wrapper, Button, Trainer, Trainerquest, Ul, Input, Ol, Li, H2, H3, Hr } from './styled';
+
 const Trens = () => {
   const { id } = useParams();
   const trainerdata = trainersData[id].data;
@@ -35,25 +37,29 @@ const Trens = () => {
   };
   return (
     <>
-      <h2>тренажеры</h2>
-      <div style={{ display: 'flex' }}>
-        <ul style={{ marginRigth: '200px' }}>
-          {trainerdata.left.map((statement) => (
-            <li key={statement.id}>
-              {statement.text}
-              <input id={statement.id} type="number" min="1" max={trainerdata.left.length} onChange={handleChange} />
-            </li>
-          ))}
-        </ul>
-        <ol>
-          {trainerdata.right.map((statement) => (
-            <li key={statement.id}>{statement.text}</li>
-          ))}
-        </ol>
-      </div>
-      <button type="button" onClick={handleClick} disabled={disabled}>
+      <Trainer>
+        <H2>Предварительный просмотр:</H2>
+        <Hr></Hr>
+        <H3>Тренажёр №**.</H3>
+        <Trainerquest>
+          <Ul>
+            {trainerdata.left.map((statement) => (
+              <Li key={statement.id}>
+                {statement.text}
+                <Input id={statement.id} type="number" min="1" max={trainerdata.left.length} onChange={handleChange} />
+              </Li>
+            ))}
+          </Ul>
+          <Ol>
+            {trainerdata.right.map((statement) => (
+              <li key={statement.id}>{statement.text}</li>
+            ))}
+          </Ol>
+        </Trainerquest>
+      </Trainer>
+      <Button type="button" onClick={handleClick} disabled={disabled}>
         проверить ответы
-      </button>
+      </Button>
     </>
   );
 };

@@ -31,3 +31,9 @@ export const Logo = styled.div`
     color: black;
   }
 `;
+
+export const Wrapper = styled.div`
+  min-height:100vh;
+    background: #E0FFFF;
+    background: linear-gradient(to bottom, #E0FFFF, #AFEEEE);
+`;
