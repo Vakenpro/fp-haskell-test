@@ -19,13 +19,13 @@ export const Button = styled.button`
     background: white;
     box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
     transition: .3s;
-        &:hover {
+    &:hover {
         background: #2EE59D;
         box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
         color: white;
         transform: translateY(-7px);
         border:none;
-        }
+    }
 `;
 
 export const Form = styled.form`
