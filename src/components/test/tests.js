@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 
 import { Button, Form, Li, Ul, H2, H3, Hr } from './styled';
 
-
 import { testsData } from './testConstant';
 const Test = () => {
   const { id } = useParams();
@@ -26,29 +25,16 @@ const Test = () => {
     setDisabled(testData.length > answersCount);
   }, [answersCount]);
 
-  const handleChoose = (e, id, value, answerId) => {
-    if (e.target.type === 'radio') {
-      const item = { value, answerId, id };
-      const result = chosenAnswers.filter((elem) => elem.id !== id);
-      if (chosenAnswers.length === 0 || chosenAnswers.length === result.length) {
-        setChosenAnswers([...chosenAnswers, item]);
-        setAnswersCount(answersCount + 1);
-        setTrueAnswers(testData[id].trueAnswerId.includes(answerId) ? trueAnswers + 1 : trueAnswers);
-      } else {
-        setChosenAnswers(chosenAnswers.map((answer) => (answer.id === id ? item : answer)));
-        setTrueAnswers(testData[id].trueAnswerId.includes(answerId) ? trueAnswers + 1 : trueAnswers - 1);
-      }
+  const handleChoose = (id, value, answerId) => {
+    const item = { value, answerId, id };
+    const result = chosenAnswers.filter((elem) => elem.id !== id);
+    if (chosenAnswers.length === 0 || chosenAnswers.length === result.length) {
+      setChosenAnswers([...chosenAnswers, item]);
+      setAnswersCount(answersCount + 1);
+      setTrueAnswers(testData[id].trueAnswerId.includes(answerId) ? trueAnswers + 1 : trueAnswers);
     } else {
-      const item = { value, answerId, id: `${id}${answerId}` };
-      if (e.target.checked) {
-        setChosenAnswers([...chosenAnswers, item]);
-        setAnswersCount(answersCount + 1);
-        setTrueAnswers(testData[id].trueAnswerId.includes(answerId) ? trueAnswers + 1 : trueAnswers - 1);
-      } else {
-        setChosenAnswers(chosenAnswers.filter((answer) => answer.id !== `${id}${answerId}`));
-        setAnswersCount(answersCount - 1);
-        setTrueAnswers(testData[id].trueAnswerId.includes(answerId) ? trueAnswers - 1 : trueAnswers + 1);
-      }
+      setChosenAnswers(chosenAnswers.map((answer) => (answer.id === id ? item : answer)));
+      setTrueAnswers(testData[id].trueAnswerId.includes(answerId) ? trueAnswers + 1 : trueAnswers - 1);
     }
   };
 
@@ -61,21 +47,22 @@ const Test = () => {
   return (
     <>
       <Ul>
-        <H2>Предварительный просмотр:</H2>
+        <H2>Тест по Haskell №{+id + 1}</H2>
         <Hr></Hr>
-        <H3>Тест по Haskell на тему:"*****".</H3>
         {testData.map((test) => (
           <Li key={test.id}>
-            {test.question}
+            {test.question.split('\n').map((text) => (
+              <p style={{ margin: '0' }}>{text}</p>
+            ))}
             <br />
             <Form>
               {test.answers.map((answer) => (
                 <label key={answer.id}>
                   <input
-                    type={(test.type === 'one choose' && 'radio') || 'checkbox'}
+                    type="radio"
                     name={test.id}
                     value={answer.text}
-                    onClick={(e) => handleChoose(e, test.id - 1, answer.text, answer.id)}
+                    onClick={() => handleChoose(test.id - 1, answer.text, answer.id)}
                   />
                   {answer.text}
                 </label>

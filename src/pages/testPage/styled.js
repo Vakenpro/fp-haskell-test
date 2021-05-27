@@ -7,6 +7,18 @@ export const A = styled(Link)`
   width: 100%;
   max-height: 45px;
   line-height: 45px;
+  color: #524f4e;
+  &:hover {
+    color: white;
+  }
+`;
+
+export const Li = styled.li`
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  max-height: 45px;
+  line-height: 45px;
   border-radius: 45px;
   margin-bottom: 50px;
   font-family: 'Montserrat', sans-serif;
@@ -16,14 +28,14 @@ export const A = styled(Link)`
   letter-spacing: 3px;
   font-weight: 600;
   color: #524f4e;
-  background: #AFEEEE;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
-  transition: .3s;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
   &:hover {
-    background: #2EE59D;
-    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    background: #2ee59d;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
     color: white;
     transform: translateY(-7px);
-    border:none;
+    border: none;
   }
 `;

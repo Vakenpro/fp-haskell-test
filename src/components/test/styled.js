@@ -29,31 +29,29 @@ export const Button = styled.button`
 `;
 
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 9px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 9px;
 `;
 
-export const Li = styled.li`
-
-`;
+export const Li = styled.li``;
 
 export const Ul = styled.ul`
-    list-style-type: none;
-    margin: auto;
-    padding: auto;
+  list-style-type: none;
+  margin: auto;
+  padding: auto;
 `;
 
 export const H2 = styled.h2`
-    font-size: 50px;
-    color: #ADFF2F;
-    margin: 0;
+  font-size: 50px;
+  color: #adff2f;
+  margin: 0;
 `;
 
 export const H3 = styled.h3`
-    margin: auto;
-    text-align: center;
-    font-size: 20px;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
 `;
 
 export const Hr = styled.hr`
