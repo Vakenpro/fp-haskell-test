@@ -207,4 +207,38 @@ export const crosswordData = [
       },
     },
   },
+  {
+    id: 5,
+    data: {
+      across: {
+        4: { clue: '', answer: 'ПРОСТОЙ', row: 3, col: 12 },
+        1: { clue: '', answer: 'ТРАНСЛЯТОР', row: 5, col: 7 },
+        7: { clue: '', answer: 'ПРЕПРОЦЕССОР', row: 8, col: 7 },
+        6: { clue: '', answer: 'АССЕМБЛЕР', row: 10, col: 0 },
+        5: { clue: '', answer: 'МАШИННЫМ', row: 12, col: 6 },
+      },
+      down: {
+        8: { clue: '', answer: 'ЭМУЛЯТОР', row: 9, col: 4 },
+        3: { clue: '', answer: 'ИНТЕРПРЕТАЦИЯ', row: 3, col: 7 },
+        2: { clue: '', answer: 'КОМПИЛЯТОР', row: 0, col: 12 },
+      },
+    },
+  },
+  {
+    id: 6,
+    data: {
+      across: {
+        5: { clue: '', answer: 'ПОДМНОЖЕСТВОМ', row: 3, col: 4 },
+        3: { clue: '', answer: 'СОЗНАНИЯ', row: 6, col: 0 },
+        4: { clue: '', answer: 'НЕЙРОНОВ', row: 12, col: 5 },
+      },
+      down: {
+        1: { clue: '', answer: 'ПАРАДИГМА', row: 3, col: 4 },
+        2: { clue: '', answer: 'ИНТЕЛЛЕКТ', row: 6, col: 6 },
+        6: { clue: '', answer: 'ПРИЗНАКОВОЕ', row: 5, col: 11 },
+        8: { clue: '', answer: 'БУСТИНГ', row: 0, col: 13 },
+        7: { clue: '', answer: 'МНОГОЗАДАЧНОЕ', row: 3, col: 16 },
+      },
+    },
+  },
 ];

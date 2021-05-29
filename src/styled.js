@@ -15,7 +15,7 @@ export const Layerbgcontent1 = styled.div`
   width: 100%;
   height: 700px;
   top: 1200px;
-  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0b1d26 61.38%);
+  background: linear-gradient(180deg, rgba(148, 200, 201, 0) 0%, #0b1d26 61.38%);
 `;
 
 export const Layerbgcontent2 = styled.div`
@@ -23,21 +23,16 @@ export const Layerbgcontent2 = styled.div`
   width: 100%;
   height: 2650px;
   top: 1900px;
-  background: linear-gradient(rgba(11, 29, 38, 0) 0%, #0b1d26 0%);
+  background: linear-gradient(rgba(188, 243, 243, 0) 0%, #0b1d26 0%);
 `;
 
 export const Wrapper = styled.div`
-  background: linear-gradient(to bottom, #E0FFFF, #AFEEEE);
-  min-height: 1007px;
+  background: linear-gradient(to bottom, #e0ffff, #afeeee);
 `;
 
 export const Header = styled.div`
-  min-width: 1920px;
-  min-height: 4600px;
   font-size: 18px;
   font-weight: 400;
-  background: #E0FFFF;
-  background: linear-gradient(to bottom, #E0FFFF, #AFEEEE);
 `;
 
 export const Head = styled.div`
@@ -46,7 +41,6 @@ export const Head = styled.div`
   justify-content: space-between;
   padding: 64px 64px;
   margin-right: 64px;
-  min-width: 1760px;
   min-height: 25px;
   list-style-type: none;
   color: white;
@@ -121,8 +115,7 @@ export const Main = styled.div`
 `;
 
 export const Maintext = styled.div`
-  padding-left: 316px;
-  padding-right: 316px;
+  margin: auto;
 `;
 
 export const Groupcontent7 = styled.div`
@@ -142,18 +135,20 @@ export const Linefirst = styled.span`
 `;
 
 export const Textcontent = styled.div`
-  font-family: "New Tegomin", serif;
+  font-family: 'New Tegomin', serif;
   font-weight: 600;
   font-size: 84px;
   line-height: 100px;
   text-transform: capitalize;
   margin-top: 32px;
   margin-bottom: 33px;
+  padding: 0 0 0 80px;
 `;
 
 export const Groupcontent17 = styled.div`
   display: flex;
   align-items: center;
+  padding-left: 60px;
 `;
 
 export const Social = styled.div`
@@ -206,11 +201,7 @@ export const Vl = styled.div`
 
 export const Section = styled.div`
   padding-top: 970px;
-  padding-left: 150px;
-  padding-right: 229px;
-  min-width: 1462px;
-  min-height: 3040px;
-  margin-right: 300px;
+  margin: auto;
 `;
 
 export const Content = styled.div`
@@ -232,7 +223,6 @@ export const Content2 = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 1462px;
   min-height: 720px;
 `;
 
@@ -246,7 +236,6 @@ export const Content3 = styled.div`
 export const Footer = styled.div`
   margin-left: 50px;
   position: absolute;
-  min-width: 1462px;
   min-height: 280px;
   display: flex;
 `;
@@ -399,8 +388,8 @@ export const Linktext = styled.div`
   font-size: 18px;
   line-height: 32px;
   color: #ffffff;
-  margin-bottom: 16px;\
-  & > * {
+  margin-bottom: 16px;
+  \ & > * {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;

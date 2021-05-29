@@ -1,4 +1,5 @@
 {
+  "homepage": "http://vakenpro.github.io/fp-haskell-test/",
   "name": "fp-haskell-test",
   "version": "0.1.0",
   "private": true,
@@ -41,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "2.2.1"
