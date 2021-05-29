@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/fp-haskell-test/static/css/main.e47064c0.chunk.css",
+    "main.js": "/fp-haskell-test/static/js/main.0d555dd7.chunk.js",
+    "main.js.map": "/fp-haskell-test/static/js/main.0d555dd7.chunk.js.map",
+    "runtime-main.js": "/fp-haskell-test/static/js/runtime-main.8d29ad1d.js",
+    "runtime-main.js.map": "/fp-haskell-test/static/js/runtime-main.8d29ad1d.js.map",
+    "static/js/2.ad283fd4.chunk.js": "/fp-haskell-test/static/js/2.ad283fd4.chunk.js",
+    "static/js/2.ad283fd4.chunk.js.map": "/fp-haskell-test/static/js/2.ad283fd4.chunk.js.map",
+    "index.html": "/fp-haskell-test/index.html",
+    "static/css/main.e47064c0.chunk.css.map": "/fp-haskell-test/static/css/main.e47064c0.chunk.css.map",
+    "static/js/2.ad283fd4.chunk.js.LICENSE.txt": "/fp-haskell-test/static/js/2.ad283fd4.chunk.js.LICENSE.txt",
+    "static/media/01.4d22f01a.jpg": "/fp-haskell-test/static/media/01.4d22f01a.jpg",
+    "static/media/02.65d09cba.png": "/fp-haskell-test/static/media/02.65d09cba.png",
+    "static/media/03.6b4c52b0.jpg": "/fp-haskell-test/static/media/03.6b4c52b0.jpg",
+    "static/media/crossword1.c65229bb.docx": "/fp-haskell-test/static/media/crossword1.c65229bb.docx",
+    "static/media/crossword2.0c2386ae.docx": "/fp-haskell-test/static/media/crossword2.0c2386ae.docx",
+    "static/media/crossword3.8997455f.docx": "/fp-haskell-test/static/media/crossword3.8997455f.docx",
+    "static/media/crossword4.caff506b.docx": "/fp-haskell-test/static/media/crossword4.caff506b.docx",
+    "static/media/crossword5.7c185eae.docx": "/fp-haskell-test/static/media/crossword5.7c185eae.docx",
+    "static/media/crossword6.d05b0c35.docx": "/fp-haskell-test/static/media/crossword6.d05b0c35.docx",
+    "static/media/crossword7.1449aea6.docx": "/fp-haskell-test/static/media/crossword7.1449aea6.docx",
+    "static/media/instagram.3d66ddb2.svg": "/fp-haskell-test/static/media/instagram.3d66ddb2.svg",
+    "static/media/readmore.96116f35.svg": "/fp-haskell-test/static/media/readmore.96116f35.svg",
+    "static/media/scroll.264abec8.svg": "/fp-haskell-test/static/media/scroll.264abec8.svg",
+    "static/media/test1.ddaf2b8c.docx": "/fp-haskell-test/static/media/test1.ddaf2b8c.docx",
+    "static/media/test2.5f51d1f7.docx": "/fp-haskell-test/static/media/test2.5f51d1f7.docx",
+    "static/media/test3.77442be0.docx": "/fp-haskell-test/static/media/test3.77442be0.docx",
+    "static/media/test4.1d1c37e0.docx": "/fp-haskell-test/static/media/test4.1d1c37e0.docx",
+    "static/media/test5.db874c97.docx": "/fp-haskell-test/static/media/test5.db874c97.docx",
+    "static/media/test6.a90edd54.docx": "/fp-haskell-test/static/media/test6.a90edd54.docx",
+    "static/media/test7.a84155dc.docx": "/fp-haskell-test/static/media/test7.a84155dc.docx",
+    "static/media/twitter.0eecca9d.svg": "/fp-haskell-test/static/media/twitter.0eecca9d.svg",
+    "static/media/user.a5a2ad6f.svg": "/fp-haskell-test/static/media/user.a5a2ad6f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d29ad1d.js",
+    "static/js/2.ad283fd4.chunk.js",
+    "static/css/main.e47064c0.chunk.css",
+    "static/js/main.0d555dd7.chunk.js"
+  ]
+}
